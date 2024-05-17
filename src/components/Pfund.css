@@ -1,0 +1,77 @@
+.nav-pills-custom .nav-link {
+  color: #aaa;
+  background: #fff;
+  position: relative;
+}
+
+.nav-pills-custom .nav-link.active {
+  color: white;
+  background:black;
+}
+.tab-content{
+width: 80%;
+
+
+}
+.image{
+
+text-align: center;
+}
+.image img{
+width:5em;
+}
+h4{
+text-align: center;
+/* margin-left: 25%; */
+}
+
+
+/* Add indicator arrow for the active tab */
+@media (min-width: 992px) {
+  .nav-pills-custom .nav-link::before {
+      content: '';
+      display: block;
+      border-top: 8px solid transparent;
+      border-left: 10px solid #fff;
+      border-bottom: 8px solid transparent;
+      position: absolute;
+      top: 50%;
+      right: -10px;
+      transform: translateY(-50%);
+      opacity: 0;
+  }
+}
+
+.nav-pills-custom .nav-link.active::before {
+  opacity: 1;
+}
+
+
+@media screen and (min-device-width: 481px) and (max-device-width: 768px) { 
+
+.tab-content{
+  width: 40% !important;
+  height: 30% !important;
+  margin-bottom: 6% !important;
+}
+.tab-content p{
+  font-size: 15px !important;
+}
+.nav-pills-custom .nav-link{
+
+font-size: 15px !important;
+  width: 50vw !important;
+
+}
+}
+
+/*
+*
+* ==========================================
+* FOR DEMO PURPOSE
+* ==========================================
+*/
+/* body {
+  min-height: 100vh;
+  background: linear-gradient(to left, #dce35b, #45b649);
+} */

@@ -1,24 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+
+import Footer from './components/Footer';
+import Pfund from './components/Pfund';
+import Operformance from './components/Operformance';
+import Opartner from './components/MultiItemAutoSlideCarousel';
+import Mfund from './components/Mfund';
+import Adminpage from './components/admin/Sidebar';
+import Sidebar from './components/admin/Sidebar';
+import Dashboard from './components/admin/Dashboard';
+import Fqa from './components/Fqa';
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header/>
+      <Operformance/>
+      <Pfund/>
+      
+      
+      {/* <Opartner/> */}
+      <Mfund/>
+      {/* <Sidebar/> */}
+      
+      {/* <Dashboard/> */}
+      <Fqa/>
+      <Footer/>
+    </>
   );
 }
 

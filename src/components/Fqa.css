@@ -1,0 +1,12 @@
+.box{
+    overflow-x: hidden;
+    width:80%;
+    height:auto;
+    background-color: rgb(226, 214, 214);
+    margin: 10%;
+    padding:5%;
+    box-shadow: 20px;
+    
+    
+
+}
