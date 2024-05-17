@@ -168,4 +168,94 @@
             display: none !important;
         }
        }
+ 
+       @media screen and (max-width: 600px) {
+        .how-section {
+            padding: 5%;
+        }
+    
+        .how-section h2 {
+            font-size: 24px;
+            margin-top: 10%;
+        }
+    
+        .how-section p {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    
+        .button {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+    
+        .btn-primary {
+            height: 8vh;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    
+        .how-section .row {
+            margin-top: 5%;
+        }
+    
+        .how-img img {
+            width: 100%;
+        }
+    
+        #tabs .nav-tabs .nav-link {
+            border-radius: 20px;
+            font-size: 14px;
+        }
+    
+        .container {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    
+        .card {
+            height: 9rem;
+            width: 9rem;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            margin: 2% auto;
+        }
+    
+        .image img {
+            width: 20px;
+        }
+    
+        .name h4 {
+            font-size: 14px;
+            margin-top: 5px;
+            text-align: center;
+        }
+    
+        .types h6 {
+            font-size: 16px;
+            margin-top: 5px;
+            text-align: center;
+        }
+    
+        .percentage {
+            margin-top: 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    
+        .percentage img {
+            width: 20px;
+            margin-top: auto;
+        }
+    
+        .percentage span {
+            font-size: 20px;
+            margin-top: 5px;
+        }
+    }
     

@@ -1,44 +1,47 @@
+/* Pfund.css */
+/* Base styles */
 .nav-pills-custom .nav-link {
   color: #aaa;
   background: #fff;
   position: relative;
+  padding: 0.5rem 1rem; /* Adjust padding for larger buttons */
 }
 
 .nav-pills-custom .nav-link.active {
   color: white;
-  background:black;
-}
-.tab-content{
-width: 80%;
-
-
-}
-.image{
-
-text-align: center;
-}
-.image img{
-width:5em;
-}
-h4{
-text-align: center;
-/* margin-left: 25%; */
+  background: black;
 }
 
+.tab-content {
+  width: 80%;
+  margin: 0 auto; /* Center the content */
+}
+
+.image {
+  text-align: center;
+}
+
+.image img {
+  width: 5em;
+}
+
+h4 {
+  text-align: center;
+}
 
 /* Add indicator arrow for the active tab */
 @media (min-width: 992px) {
   .nav-pills-custom .nav-link::before {
-      content: '';
-      display: block;
-      border-top: 8px solid transparent;
-      border-left: 10px solid #fff;
-      border-bottom: 8px solid transparent;
-      position: absolute;
-      top: 50%;
-      right: -10px;
-      transform: translateY(-50%);
-      opacity: 0;
+    content: '';
+    display: block;
+    border-top: 8px solid transparent;
+    border-left: 10px solid #fff;
+    border-bottom: 8px solid transparent;
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    transform: translateY(-50%);
+    opacity: 0;
   }
 }
 
@@ -46,32 +49,33 @@ text-align: center;
   opacity: 1;
 }
 
-
-@media screen and (min-device-width: 481px) and (max-device-width: 768px) { 
-
-.tab-content{
-  width: 40% !important;
-  height: 30% !important;
-  margin-bottom: 6% !important;
-}
-.tab-content p{
-  font-size: 15px !important;
-}
-.nav-pills-custom .nav-link{
-
-font-size: 15px !important;
-  width: 50vw !important;
-
-}
+/* Responsive styles */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .tab-content {
+    width: 60%;
+    margin-bottom: 6%;
+  }
+  .tab-content p {
+    font-size: 15px;
+  }
+  .nav-pills-custom .nav-link {
+    font-size: 15px;
+    width: 50vw;
+    padding: 0.7rem 1.2rem; 
+  }
 }
 
-/*
-*
-* ==========================================
-* FOR DEMO PURPOSE
-* ==========================================
-*/
-/* body {
-  min-height: 100vh;
-  background: linear-gradient(to left, #dce35b, #45b649);
-} */
+@media screen and (max-width: 480px) {
+  .tab-content {
+    width: 80%;
+    margin-bottom: 10%;
+  }
+  .tab-content p {
+    font-size: 13px;
+  }
+  .nav-pills-custom .nav-link {
+    font-size: 15px;
+    width: 45vw;
+    padding: 0.7rem 1.2rem; /* Adjust padding for larger buttons */
+  }
+}

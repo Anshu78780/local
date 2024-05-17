@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Mfund.css';
 import { Pie } from 'react-chartjs-2';
 import { Chart, ArcElement } from 'chart.js';
+import Lumpsum from './Lumpsum.jsx';
 Chart.register(ArcElement);
 
 const pieParams = { height: 200, margin: { right: 5 } };
@@ -14,6 +15,7 @@ function Mfund() {
   const [futureValue, setFutureValue] = useState(0);
   const [estimatedReturn, setEstimatedReturn] = useState(0);
   const [chartData, setChartData] = useState([32, 52]);
+  const [showLumpsum, setShowLumpsum] = useState(false); // Define showLumpsum state
 
   const handleSliderChange = (e, setValue) => {
     const newValue = parseInt(e.target.value);
@@ -22,6 +24,10 @@ function Mfund() {
     setFutureValue(result.futureValue);
     setEstimatedReturn(result.estimatedReturn);
     updateChartData();
+  };
+
+  const handleLumpsumClick = () => { // Define handleLumpsumClick function
+    setShowLumpsum(true);
   };
 
   const calculate = (monthlyInvestment, annualInterestRate, years) => {
@@ -36,7 +42,6 @@ function Mfund() {
   };
 
   const updateChartData = () => {
-  
     const bluePercentage = (timePeriod / 30) * 100; 
     const redPercentage = 100 - bluePercentage;
 
@@ -56,60 +61,67 @@ function Mfund() {
 
   return (
     <>
-      <div className="sip-calculator">
-        <h1>SIP Calculator</h1>
-        <div className="input-fields">
-          <div className="input-field">
-            <label htmlFor="sip">Monthly Investment</label>
-            <input
-              type="range"
-              id="sip"
-              min="0"
-              max="100000"
-              step="1000"
-              value={sip}
-              onChange={(e) => handleSliderChange(e, setSip)}
-            />
-            <span>{sip}</span>
+      {!showLumpsum && (
+        <div className="sip-calculator">
+       <h1 className="calculator-heading">SIP Calculator</h1>
+
+          <button onClick={handleLumpsumClick}>Lumpsum</button>
+          <div className="input-fields">
+            <div className="input-field">
+              <label htmlFor="sip">Monthly Investment</label>
+              <input
+                type="range"
+                id="sip"
+                min="0"
+                max="100000"
+                step="1000"
+                value={sip}
+                onChange={(e) => handleSliderChange(e, setSip)}
+              />
+              <span>{sip}</span>
+            </div>
+            <div className="input-field">
+              <label htmlFor="expectedReturnRate">Expected Return Rate (p.a)</label>
+              <input
+                type="range"
+                id="expectedReturnRate"
+                min="0"
+                max="20"
+                step="0.1"
+                value={expectedReturnRate}
+                onChange={(e) => handleSliderChange(e, setExpectedReturnRate)}
+              />
+              <span>{expectedReturnRate}%</span>
+            </div>
+            <div className="input-field">
+              <label htmlFor="timePeriod">Time Period (Yr)</label>
+              <input
+                type="range"
+                id="timePeriod"
+                min="1"
+                max="30"
+                step="1"
+                value={timePeriod}
+                onChange={(e) => handleSliderChange(e, setPeriod)}
+              />
+              <span>{timePeriod}</span>
+            </div>
           </div>
-          <div className="input-field">
-            <label htmlFor="expectedReturnRate">Expected Return Rate (p.a)</label>
-            <input
-              type="range"
-              id="expectedReturnRate"
-              min="0"
-              max="20"
-              step="0.1"
-              value={expectedReturnRate}
-              onChange={(e) => handleSliderChange(e, setExpectedReturnRate)}
-            />
-            <span>{expectedReturnRate}%</span>
-          </div>
-          <div className="input-field">
-            <label htmlFor="timePeriod">Time Period (Yr)</label>
-            <input
-              type="range"
-              id="timePeriod"
-              min="1"
-              max="30"
-              step="1"
-              value={timePeriod}
-              onChange={(e) => handleSliderChange(e, setPeriod)}
-            />
-            <span>{timePeriod}</span>
-          </div>
+          {futureValue > 0 && (
+            <div className='amount'>
+              <p className="result">Future Value of SIP: ₹{futureValue.toLocaleString(undefined, { maximumFractionDigits: 2 })}</p>
+              <p className="result">Estimated Return: ₹{estimatedReturn.toLocaleString(undefined, { maximumFractionDigits: 2 })}</p>
+              <p className="result">Total Value: ₹{(parseFloat(futureValue) + parseFloat(estimatedReturn)).toLocaleString(undefined, { maximumFractionDigits: 2 })}</p>
+            </div>
+          )}
         </div>
-        {futureValue > 0 && (
-          <div className='amount'>
-            <p className="result">Future Value of SIP: ₹{futureValue.toLocaleString(undefined, { maximumFractionDigits: 2 })}</p>
-            <p className="result">Estimated Return: ₹{estimatedReturn.toLocaleString(undefined, { maximumFractionDigits: 2 })}</p>
-            <p className="result">Total Value: ₹{(parseFloat(futureValue) + parseFloat(estimatedReturn)).toLocaleString(undefined, { maximumFractionDigits: 2 })}</p>
-          </div>
-        )}
-      </div>
-      <div className="piue">
-        <Pie data={data} />
-      </div>
+      )}
+      {!showLumpsum && (
+        <div className="piue">
+          <Pie data={data} />
+        </div>
+      )}
+      {showLumpsum && <Lumpsum />} 
     </>
   );
 }
