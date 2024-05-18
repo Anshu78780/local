@@ -1,4 +1,5 @@
 import {useEffect,useState} from 'react';
+import './Adminpage.css';
 const Dashboard = () => {
   
    const[record,setRecord] = useState([])
