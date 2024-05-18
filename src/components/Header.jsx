@@ -19,7 +19,7 @@ function Header() {
      <>
      <div className={`how-section1 ${darkMode ? 'dark-mode' : ''}`}>
          {/* Dark mode button */}
-         <button type="button" onClick={toggleDarkMode} className={`btn btn-dark ${darkMode ? 'dark-mode-button-dark' : 'dark-mode-button-light'}`}>{darkMode ? 'Light Mode' : 'Dark Mode'}</button>
+{/*          <button type="button" onClick={toggleDarkMode} className={`btn btn-dark ${darkMode ? 'dark-mode-button-dark' : 'dark-mode-button-light'}`}>{darkMode ? 'Light Mode' : 'Dark Mode'}</button> */}
 
          <div className="row">
              <div className="col-md-6 how-img">
