@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import RegistrationForm from './pages/RegistrationForm';
 import KYCPage from './pages/KYCPage';
 import TestComponent from './pages/TestComponent';
+import Dashboard from './components/admin/Dashboard';
 import {
   createBrowserRouter,
 
@@ -24,7 +25,10 @@ const router = createBrowserRouter([
   },{
     path: "/userpanel",
     element: <TestComponent/>
-  },
+  },{
+    path: "/partner",
+    element: <Dashboard/>
+  }
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

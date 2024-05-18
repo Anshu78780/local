@@ -18,15 +18,19 @@
  p{
     font-family:Arial, Helvetica, sans-serif;
 }
-p{
-    margin-top:20px;
-    color:black;
-    font-size:30px;
+p {
+    margin-top: 20px;
+    font-size: 30px;
     line-height: 40px;
+}
+
+
+.dark-mode p {
+    color: #fff; 
 }
 .button{
     font-family:Arial, Helvetica, sans-serif;
-    /* display: inline-flex; */
+    
     margin-left: 15%;
     margin-top:60px;
     
@@ -85,4 +89,29 @@ p{
        
 
       }
+}/* Header.css */
+
+.dark-mode {
+    background-color: #030202; /* Example dark mode background color */
+    color: #fff; /* Example dark mode text color */
 }
+
+.dark-mode .btn {
+    background-color: rgb(73, 114, 225); /* Example dark mode button background color */
+    color: #fff; /* Example dark mode button text color */
+}
+/* Header.css */
+
+/* Dark mode button */
+.dark-mode-button-light {
+    position: absolute;
+    top: 20px;
+    right: 20px; /* Updated position to top right corner */
+}
+
+.dark-mode-button-dark {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+

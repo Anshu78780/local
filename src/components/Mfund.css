@@ -80,3 +80,9 @@ span,
     font-size: 12px; 
   }
 }
+.dark-mode .amount p.result {
+  color: #121fdb; 
+}
+.dark-mode .amount label {
+  color: #2f0aea; 
+}

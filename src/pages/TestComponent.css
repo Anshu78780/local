@@ -1,0 +1,65 @@
+.user-panel {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-panel-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .user-panel-header h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .user-panel-header p {
+    color: #666;
+  }
+  
+  .user-panel-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .user-panel-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+  .user-panel-item h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .user-panel-item ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .user-panel-item li {
+    margin-bottom: 5px;
+  }
+  
+  .user-panel-item button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  .user-panel-item button:hover {
+    background-color: #0056b3;
+  }
+  

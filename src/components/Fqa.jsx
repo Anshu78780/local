@@ -25,7 +25,7 @@ function Fqa() {
                       </h2>
                       <div id="faqAccountCollapse1" className="accordion-collapse collapse" aria-labelledby="faqAccountHeading1">
                         <div className="accordion-body">
-                          <p>An account is a personal or organizational record that allows you to access and manage various services, often requiring authentication through a username and password.</p>
+                          <p>An account is a personal or organizational record that allows you to access and manage various services, often requiring authentication through a <span>username and password</span>.</p>
                         </div>
                       </div>
                     </div>

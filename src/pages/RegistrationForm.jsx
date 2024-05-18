@@ -8,7 +8,8 @@ function RegistrationForm() {
     lastName: '',
     email: '',
     password: '',
-    mobileNumber: '' // Adding mobile number field to initial form data
+    reenterPassword: '',
+    mobileNumber: '' 
   };
 
   const [formData, setFormData] = useState(initialFormData);
@@ -43,6 +44,7 @@ function RegistrationForm() {
             name="firstName"
             value={formData.firstName}
             onChange={handleChange}
+            placeholder="Enter your first name"
             required
           />
         </div>
@@ -54,6 +56,7 @@ function RegistrationForm() {
             name="lastName"
             value={formData.lastName}
             onChange={handleChange}
+            placeholder="Enter your last name"
             required
           />
         </div>
@@ -65,6 +68,7 @@ function RegistrationForm() {
             name="email"
             value={formData.email}
             onChange={handleChange}
+            placeholder="Enter your email address"
             required
           />
         </div>
@@ -76,6 +80,7 @@ function RegistrationForm() {
             name="mobileNumber"
             value={formData.mobileNumber}
             onChange={handleChange}
+            placeholder="Enter your mobile number"
             required
           />
         </div>
@@ -87,14 +92,27 @@ function RegistrationForm() {
             name="password"
             value={formData.password}
             onChange={handleChange}
+            placeholder="Enter your password"
             required
           />
+        </div>
+        <div>
+          <label htmlFor="reenterPassword">Re-enter Password:</label>
+          <input
+            type="password"
+            id="reenterPassword"
+            name="reenterPassword"
+            value={formData.reenterPassword}
+            onChange={handleChange}
+            placeholder="Re-enter your password"
+            required
+          />
+        </div>
+        <div>
           <Link to="/kyc"> 
             <button type="button" className="btn btn-primary">Next</button>
           </Link>
-     
         </div>
-       
       </form>
     </>
   );
