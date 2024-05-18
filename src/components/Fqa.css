@@ -1,12 +1,22 @@
-.box{
+.box {
     overflow-x: hidden;
-    width:80%;
-    height:auto;
+    width: 80%;
+    height: auto;
     background-color: rgb(226, 214, 214);
     margin: 10%;
-    padding:5%;
-    box-shadow: 20px;
-    
-    
+    padding: 5%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
 
+  
+    @media screen and (max-width: 768px) {
+        width: 90%; 
+        margin: 5%; 
+        padding: 3%; 
+    }
+
+    @media screen and (max-width: 480px) {
+        width: 95%; 
+        margin: 2%; 
+        padding: 2%;
+    }
 }

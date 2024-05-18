@@ -80,7 +80,7 @@ function Operformance() {
 </div>
 
 <div className="percentage">
-	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzQZePII6u7R75DreI6vt814IUsr9ae2TTJg&usqp=CAU"/><span>12%</span>
+	<img alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzQZePII6u7R75DreI6vt814IUsr9ae2TTJg&usqp=CAU"/><span>12%</span>
 </div>
 
 

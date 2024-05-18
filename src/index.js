@@ -3,11 +3,33 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import RegistrationForm from './pages/RegistrationForm';
+import KYCPage from './pages/KYCPage';
+import TestComponent from './pages/TestComponent';
+import {
+  createBrowserRouter,
 
+  RouterProvider,
+} from "react-router-dom";
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App/>
+  },{
+    path: "/registration",
+    element: <RegistrationForm/>
+  },{
+    path: "/kyc",
+    element: <KYCPage/>
+  },{
+    path: "/userpanel",
+    element: <TestComponent/>
+  },
+]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+     <RouterProvider router={router} />
   </React.StrictMode>
 );
 
